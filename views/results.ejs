@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/public/css/styles.css" />
+    <title>Covid-19 Statistics Report | Results</title>
+  </head>
+  <body>
+    <div class="container mt-5 mb-5">
+      <h3>Report:</h3>
+      <section class="d-flex justify-content-center align-content-center">
+        <table class="table table-dark table-bordered table-striped p-5 m-5" style="width: 60%">
+          <tr>
+            <td><h1><%= result_data.country %></h1></td>
+            <td>
+              <img
+                src="<%= image_url%>"
+                class="img-fluid"
+                height="150px"
+                width="auto"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Total Cases in the Country</th>
+            <td><%= result_data.cases%></td>
+          </tr>
+          <tr>
+            <th>Today's Cases</th>
+            <td><%= result_data.todayCases%></td>
+          </tr>
+          <tr>
+            <th>Total Deceased</th>
+            <td><%= result_data.deaths%></td>
+          </tr>
+          <tr>
+            <th>Today's Deceased</th>
+            <td><%= result_data.todayDeaths%></td>
+          </tr>
+          <tr>
+            <th>Total Recovered</th>
+            <td><%= result_data.recovered%></td>
+          </tr>
+          <tr>
+            <th>Today's Recovered</th>
+            <td><%= result_data.todayRecovered%></td>
+          </tr>
+          <tr>
+            <th>Active Cases</th>
+            <td><%= result_data.active%></td>
+          </tr>
+          <tr>
+            <th>Critical Patients</th>
+            <td><%= result_data.critical%></td>
+          </tr>
+        </table>
+      </section>
+      <center><h3>Want to Know about another Country? &nbsp;&nbsp;<a class="btn btn-warning" href="/">Return to Home</a> </h3></center>
+    </div>
+  </body>
+</html>
